@@ -1,0 +1,8 @@
+# Generated files
+theme/icon-theme.cache
+
+# Local clones / scratch
+/vendor/
+*.tar.gz
+*.zip
+.DS_Store

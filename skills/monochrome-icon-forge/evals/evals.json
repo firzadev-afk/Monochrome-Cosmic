@@ -1,0 +1,29 @@
+{
+  "skill_name": "monochrome-icon-forge",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Buatkan icon monochrome untuk aplikasi Freebuff supaya cocok dengan icon theme bergaya YAMIS (glyph 1 warna terang di atas gelap), simpan sebagai freebuff.svg. Sertakan isi file SVG final dan langkah penempatannya.",
+      "expected_output": "Agent sources the real Freebuff logo first (installed hicolor PNG: double-F mark), redraws that double-F as SVG paths on viewBox 0 0 16.933 16.933 with transparent background and ColorScheme-Text/currentColor (#d8dee9), places it in the Monochrome-Cosmic theme apps/scalable under the exact Icon= name, and verifies with a small-size side-by-side render. It does NOT invent a single-F-plus-cursor logo, add a background plate, suggest hicolor placement, or edit the app's desktop file. (Baseline without the skill did all of those.)",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Icon aplikasi ZCode di COSMIC masih pakai logo warna aslinya. Tolong sesuaikan dengan set Monochrome-Cosmic kita.",
+      "expected_output": "Agent reads the ZCode .desktop Icon= value (zcode), finds the installed original Z logo, produces a single-color Z glyph at the house standard in theme/apps/scalable/zcode.svg, runs gtk-update-icon-cache, restarts cosmic-panel/launcher/app-library, proves a GTK lookup resolves into Monochrome-Cosmic, then commits and pushes so local and GitHub stay in sync.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Aku download logo aplikasi dari internet bentuknya PNG warna-warni dan agak kompleks. Jadikan icon untuk Monochrome-Cosmic ya.",
+      "expected_output": "Agent treats the PNG as a draft source only: redraws or traces it to clean single-color SVG paths at 16.933 canvas, renders original vs monochrome side by side at 16/24/48 px, simplifies details that vanish at 24 px while keeping the logo's signature silhouette, and reports if no silhouette survives small sizes instead of shipping a blurry trace or a generic placeholder.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Ganti wallpaper COSMIC-ku jadi yang gelap dan samakan warna aksen panelnya.",
+      "expected_output": "Near-miss: the skill does NOT trigger. Wallpaper and accent colors are COSMIC appearance settings (.ron themes), not application icon glyphs; the agent handles it as a settings task without the icon workflow.",
+      "files": []
+    }
+  ]
+}
