@@ -113,3 +113,27 @@ for name in extra_aliases:
         os.unlink(dest)
     os.symlink(os.readlink(src), dest)
     print("alias", name, "->", os.readlink(src))
+
+# Lapisan terakhir: file khas fork COSMIC (harpoonwithaz) yang tidak ada
+# di upstream Bitbucket. Salin hanya yang belum ada di theme baru.
+added = 0
+for ctx in CONTEXTS:
+    old_ctx = os.path.join(OLD, ctx)
+    if not os.path.isdir(old_ctx):
+        continue
+    for root, dirs, files in os.walk(old_ctx):
+        rel_dir = os.path.relpath(root, OLD)
+        if "scalable-outlined" in rel_dir.split(os.sep):
+            continue
+        for f in files:
+            src = os.path.join(root, f)
+            dest = os.path.join(DST, rel_dir, f)
+            if os.path.lexists(dest):
+                continue
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            if os.path.islink(src):
+                os.symlink(os.readlink(src), dest)
+            else:
+                shutil.copyfile(src, dest)
+            added += 1
+print(f"file fork ditambahkan: {added}")
