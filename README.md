@@ -31,6 +31,9 @@ The set is designed for dark COSMIC themes, panels, and docks.
   nothing in the panel falls back to a colorful icon.
 - GTK and Flatpak applications use the same theme through the
   freedesktop icon lookup, so one selection styles everything.
+- Optional: the boot splash can match as well. See
+  [docs/PLYMOUTH.md](docs/PLYMOUTH.md) for the monochrome
+  Plymouth variant of the CachyOS "dreamboat" boot animation.
 
 ## Install
 
