@@ -114,8 +114,8 @@ for name in extra_aliases:
     os.symlink(os.readlink(src), dest)
     print("alias", name, "->", os.readlink(src))
 
-# Lapisan terakhir: file khas fork COSMIC (harpoonwithaz) yang tidak ada
-# di upstream Bitbucket. Salin hanya yang belum ada di theme baru.
+# Lapisan terakhir: pemetaan khas COSMIC dari salinan lokal lama yang
+# tidak ada di upstream Bitbucket. Salin hanya yang belum ada.
 added = 0
 for ctx in CONTEXTS:
     old_ctx = os.path.join(OLD, ctx)
@@ -136,4 +136,4 @@ for ctx in CONTEXTS:
             else:
                 shutil.copyfile(src, dest)
             added += 1
-print(f"file fork ditambahkan: {added}")
+print(f"file pemetaan COSMIC ditambahkan: {added}")

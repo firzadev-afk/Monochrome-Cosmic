@@ -17,6 +17,21 @@ by `scripts/import_yamis.py`; new icons must follow this document.
 4. Never modify the application's own files or `.desktop` entries to
    make an icon fit. All customization lives inside this theme.
 
+## COSMIC specifics
+
+1. COSMIC requests many icons by reverse-DNS name
+   (`com.system76.CosmicFiles`, `com.system76.CosmicTerm`, ...).
+   Those names are first-class citizens here: every COSMIC app,
+   applet, and Settings page name that exists on a stock COSMIC
+   install must resolve inside this theme.
+2. Applet and panel icons are requested at small sizes and often
+   with a `-symbolic` suffix. Alias those names to the fitting
+   glyph; a missing symbolic name shows a colorful fallback in the
+   panel, which is exactly what this theme exists to prevent.
+3. Panel, launcher, and app library cache icons in memory. After
+   any change, refresh the icon cache and restart those processes
+   (or log out/in) before judging the result on screen.
+
 ## Drawing rules
 
 1. Canvas: `viewBox="0 0 16.933 16.933"` (64 x 64), transparent

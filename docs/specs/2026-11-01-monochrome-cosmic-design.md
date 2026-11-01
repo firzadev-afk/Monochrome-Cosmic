@@ -5,9 +5,10 @@ Status: approved by operator ("lakukan"), built same day.
 ## Intent
 
 Who: firzadev-afk, COSMIC desktop user, now maintainer.
-Why now: the GitHub fork of YAMIS for COSMIC is inactive; the operator
-wants one owned project where folder layout, file naming, and icon
-creation are consistent and self-maintained.
+Why now: the operator wants one owned, self-maintained project that
+takes its artwork directly from the original YAMIS repository on
+Bitbucket and integrates it properly with COSMIC, instead of
+depending on an unmaintained copy.
 Success: every installed application shows a monochrome glyph that is
 recognizably its real logo; repository and local install never drift.
 
@@ -46,7 +47,7 @@ recognizably its real logo; repository and local install never drift.
 - [x] Skill `monochrome-icon-forge` + evals (repo + myskills)
 - [x] GitHub repo created, first commit pushed
 - [x] Theme installed and lookups verified
-- [x] Panel processes restarted; old YAMIS-Cosmic kept as archive
+- [x] Panel processes restarted; old theme fully replaced by Monochrome-Cosmic
 
 ## Non-goals
 
