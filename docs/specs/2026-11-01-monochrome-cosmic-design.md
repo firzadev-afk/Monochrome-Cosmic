@@ -44,9 +44,9 @@ recognizably its real logo; repository and local install never drift.
 - [x] README, STANDARDS, LICENSE, credits
 - [x] install.sh (symlink install + icon cache)
 - [x] Skill `monochrome-icon-forge` + evals (repo + myskills)
-- [ ] GitHub repo created, first commit pushed
-- [ ] Theme installed and lookups verified
-- [ ] Panel processes restarted; old YAMIS-Cosmic kept as archive
+- [x] GitHub repo created, first commit pushed
+- [x] Theme installed and lookups verified
+- [x] Panel processes restarted; old YAMIS-Cosmic kept as archive
 
 ## Non-goals
 
